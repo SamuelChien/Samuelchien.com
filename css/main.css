@@ -1,0 +1,667 @@
+@import url(http://samuelchien.com/css/enhance.css);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	font-family:inherit;
+	vertical-align:baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+
+strong {
+	font-weight:bold;
+}
+
+em {
+	font-style:italic;
+}
+
+ol, ul {
+	list-style:none;
+}
+
+:focus {
+	outline:0;
+}
+
+blockquote, q {
+	quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content:'';
+	content:none;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+
+/****************************************
+ * General
+ ****************************************/
+body {
+	background:#eee url(http://samuelchien.com/img/layout/base.jpg) left top repeat;
+	color:#333;
+	font:12px/24px Helvetica, Arial, sans-serif;
+	font-weight:normal;
+}
+
+
+/****************************************
+ * Layout
+ ****************************************/
+header {
+	width:100%;
+	float:left;
+	background:#e4e0da url(http://samuelchien.com/img/layout/head.jpg) center top repeat;
+}
+
+#pano {
+	width:100%;
+	float:left;
+	background:url(http://samuelchien.com/img/layout/pano.jpg) center top repeat-x;
+}
+
+#body {
+	width:100%;
+	float:left;
+	padding:40px 0 60px;
+	background:url(http://samuelchien.com/img/layout/body.jpg) center top repeat;
+}
+
+#foot {
+	width:100%;
+	float:left;
+	padding:32px 0 27px;
+}
+
+.box {
+	width:800px;
+	margin:0 auto;
+}
+
+
+/****************************************
+ * Links
+ ****************************************/
+a, a:visited {
+	color:#18a0df;
+	text-decoration:none;
+	border:none;
+	outline:none;
+}
+
+a:hover, a:active {
+	color:#0083c0;
+	text-decoration:underline;
+}
+
+
+/****************************************
+ * Header
+ ****************************************/
+#head {
+	width:100%;
+	height:300px;
+	float:left;
+	padding:60px 0 40px;
+	background:url(http://samuelchien.com/img/layout/samuel.png) right top no-repeat;
+}
+
+	#logo {
+		width:170px;
+		height:55px;
+		float:left;
+		margin:6px 0 0;
+		text-decoration:none;
+		text-indent:-9999px;
+	}
+	
+		#logo a {
+			width:132px;
+			height:17px;
+			float:left;
+			border:none;
+			background:url(http://samuelchien.com/img/layout/logo.png) left top no-repeat;
+			opacity:0.6;
+			transition:opacity 100ms linear;
+				-webkit-transition:opacity 100ms linear;
+				-moz-transition:opacity 100ms linear;
+				-ms-transition:opacity 100ms linear;
+				-o-transition:opacity 100ms linear;
+		}
+		
+		#logo a:hover, #logo a:active {
+			opacity:1;
+		}
+		
+	#social {
+		width:75px;
+		height:70px;
+		float:right;
+	}
+	
+		#social a {
+			width:34px;
+			height:34px;
+			float:left;
+			border:none;
+			background:url(http://samuelchien.com/img/layout/social.png) left top no-repeat;
+			text-indent:-9999px;
+			opacity:0.4;
+			transition:opacity 100ms linear;
+				-webkit-transition:opacity 100ms linear;
+				-moz-transition:opacity 100ms linear;
+				-ms-transition:opacity 100ms linear;
+				-o-transition:opacity 100ms linear;
+		}
+		
+		#social a:hover, #social a:active {
+			opacity:1;
+		}
+		
+		#social #st {
+			margin-left:6px;
+			background-position:-50px 0px;
+		}
+		
+		#social #sf {
+			margin-top:6px;
+			background-position:0 -50px;
+		}
+		
+		#social #sl {
+			margin:6px 0 0 6px;
+			background-position:-50px -50px;
+		}
+		
+	#about {
+		width:430px;
+		float:left;
+		padding:0 370px 0 0;
+	}
+	
+		#about h2, #about h3 {
+			width:100%;
+			float:left;
+			margin:0 0 10px;
+			font:20px/36px "Freight Sans", Helvetica, Arial, sans-serif;
+			font-weight:normal;
+			text-shadow:0px 1px 5px #fff;
+		}
+		
+		#about a {
+			color:#18a0df;
+			font-weight:bold;
+		}
+		
+		#about a:hover {
+			color:#0083c0;
+		}
+		
+
+/****************************************
+ * Pano
+ ****************************************/
+#timeline {
+	width:100%;
+	height:120px;
+	float:left;
+	padding:35px 0 45px;
+	background:url(http://samuelchien.com/img/layout/timeline.jpg) center top no-repeat;
+	color:#aaa;
+}
+
+	#timeline .event {
+		width:100%;
+		height:30px;
+		float:left;
+		opacity:0.7;
+		transition:opacity 100ms linear;
+			-webkit-transition:opacity 100ms linear;
+			-moz-transition:opacity 100ms linear;
+			-ms-transition:opacity 100ms linear;
+			-o-transition:opacity 100ms linear;
+	}
+	
+	#timeline .event:hover {
+		opacity:1;
+	}
+	
+		#timeline .event .line {
+			width:80px;
+			height:30px;
+			float:left;
+			line-height:30px;
+			text-transform:uppercase;
+			text-align:right;
+		}
+		
+		#timeline .event ul {
+			width:710px;
+			height:30px;
+			float:right;
+			position:relative;
+			background:url(http://samuelchien.com/img/layout/line.png) center center repeat-x;
+		}
+		
+			#timeline .event li {
+				width:17px;
+				height:17px;
+				position:absolute;
+				top:7px;
+				left:0;
+				background:url(http://samuelchien.com/img/layout/events.png) 0 3px no-repeat;
+				cursor:pointer;
+				opacity:0.7;
+				transition:opacity 100ms linear;
+					-webkit-transition:opacity 100ms linear;
+					-moz-transition:opacity 100ms linear;
+					-ms-transition:opacity 100ms linear;
+					-o-transition:opacity 100ms linear;
+			}
+			
+			#timeline #education li {
+				background-position:0 -17px;
+			}
+			
+			#timeline #life li {
+				background-position:0 -37px;
+			}
+			
+			#timeline .event .five { left:0; }
+			#timeline .event .six { left:76px; }
+			#timeline .event .seven { left:152px; }
+			#timeline .event .eight { left:228px; }
+			#timeline .event .nine { left:304px; }
+			#timeline .event .ten { left:380px; }
+			#timeline .event .eleven { left:456px; }
+			#timeline .event .twelve { left:532px; }
+			#timeline .event .thirteen { left:608px; }
+			
+			#timeline .event .jan { margin-left:0; }
+			#timeline .event .feb { margin-left:6px; }
+			#timeline .event .mar { margin-left:12px; }
+			#timeline .event .apr { margin-left:18px; }
+			#timeline .event .may { margin-left:24px; }
+			#timeline .event .jun { margin-left:30px; }
+			#timeline .event .jul { margin-left:36px; }
+			#timeline .event .aug { margin-left:42px; }
+			#timeline .event .sep { margin-left:48px; }
+			#timeline .event .oct { margin-left:54px; }
+			#timeline .event .nov { margin-left:60px; }
+			#timeline .event .dec { margin-left:66px; }
+			
+			#timeline .event li:hover {
+				opacity:1;
+			}
+			
+				#timeline .event .l {
+					visibility:hidden;
+					height:64px;
+					position:absolute;
+					top:-65px;
+					right:-35px;
+					padding-left:30px;
+					background:url(http://samuelchien.com/img/layout/pop/left.png) left top no-repeat;
+					opacity:0;
+					transition:opacity 100ms linear;
+						-webkit-transition:opacity 100ms linear;
+						-moz-transition:opacity 100ms linear;
+						-ms-transition:opacity 100ms linear;
+						-o-transition:opacity 100ms linear;
+					z-index:100;
+				}
+				
+				#timeline #career .l {
+					top:20px;
+					background:url(http://samuelchien.com/img/layout/pop/left-reverse.png) left top no-repeat;
+				}
+				
+				#timeline .event .r {
+					height:40px;
+					padding:6px 30px 18px 0;
+					background:url(http://samuelchien.com/img/layout/pop/right.png) right top no-repeat;
+					text-align:center;
+					text-shadow:0 1px 0 #fff;
+					white-space:nowrap;
+				}
+				
+				#timeline #career .r {
+					padding:12px 30px 12px 0;
+					background:url(http://samuelchien.com/img/layout/pop/right-reverse.png) right top no-repeat;
+				}
+				
+					#timeline .event div span {
+						color:#666;
+						font-size:10px;
+						line-height:8px;
+					}
+					
+					#timeline .event div p {
+						color:#000;
+						font-size:11px;
+						line-height:11px;
+						font-weight:bold;
+					}
+					
+			#timeline .event li:hover .l {
+				visibility:visible;
+				opacity:1;
+			}
+			
+	#years {
+		width:761px;
+		float:right;
+		margin:15px 0 0;
+		color:#666;
+	}
+	
+		#years li {
+			width:76px;
+			float:left;
+			text-align:right;
+		}
+		
+
+/****************************************
+ * Body
+ ****************************************/
+#body h5 {
+	width:100%;
+	height:40px;
+	float:left;
+	margin:0;
+	color:#aaa;
+	font-size:18px;
+}
+
+#things {
+	width:370px;
+	float:left;
+	margin:0;
+}
+
+	#interests {
+		width:100%;
+		float:left;
+	}
+	
+		#cloud {
+			width:100%;
+			height:190px;
+			float:left;
+			position:relative;
+		}
+		
+			#cloud li {
+				width:100px;
+				height:100px;
+				position:absolute;
+				top:0;
+				left:0;
+				color:#fff;
+				font-size:14px;
+				font-weight:bold;
+				text-align:center;
+				text-shadow:0 0 5px rgba(0,0,0,0.40);
+				border-radius:100px;
+					-webkit-border-radius:100px;
+					-moz-border-radius:100px;
+					-ms-border-radius:100px;
+					-o-border-radius:100px;
+				opacity:0.8;
+				transition:all 100ms linear;
+					-webkit-transition:all 100ms linear;
+					-moz-transition:all 100ms linear;
+					-ms-transition:all 100ms linear;
+					-o-transition:all 100ms linear;
+			}
+			
+			#cloud .one {
+				width:180px;
+				height:102px;
+				padding-top:78px;
+				left:90px;
+				background:#60cff8;
+				z-index:110;
+			}
+			
+			#cloud .two {
+				width:120px;
+				height:71px;
+				padding-top:49px;
+				top:75px;
+				background:#f87c67;
+				z-index:100;
+			}
+			
+			#cloud .three {
+				width:100px;
+				height:62px;
+				padding-top:38px;
+				top:12px;
+				left:245px;
+				background:#ffce39;
+				z-index:140;
+			}
+			
+			#cloud .four {
+				width:90px;
+				height:56px;
+				padding-top:34px;
+				top:3px;
+				left:26px;
+				background:#ffa767;
+				z-index:120;
+			}
+			
+			#cloud .five {
+				width:70px;
+				height:47px;
+				padding-top:23px;
+				top:100px;
+				left:245px;
+				background:#b6d53a;
+				z-index:120;
+			}
+			
+			#cloud .six {
+				width:60px;
+				height:43px;
+				padding-top:17px;
+				top:90px;
+				left:305px;
+				background:#e47aff;
+				z-index:130;
+			}
+			
+			#cloud li:hover {
+				opacity:1;
+			}
+			
+		#interests img {
+			width:370px;
+			height:190px;
+			float:left;
+		}	
+			
+	#stats {
+		width:100%;
+		float:left;
+		margin:40px 0 0;
+	}
+	
+		#stats div {
+			width:130px;
+			height:40px;
+			float:left;
+			margin-bottom:20px;
+			padding-left:40px;
+			background:url(http://samuelchien.com/img/layout/stats.png) left top no-repeat;
+			opacity:0.8;
+			transition:opacity 100ms linear;
+				-webkit-transition:opacity 100ms linear;
+				-moz-transition:opacity 100ms linear;
+				-ms-transition:opacity 100ms linear;
+				-o-transition:opacity 100ms linear;
+		}
+		
+		#stats .apple { float:right; background-position:0 -50px; }
+		#stats .dews { background-position:0 -100px; }
+		#stats .comp { float:right; background-position:0 -150px; }
+		
+			#stats div span {
+				width:100%;
+				float:left;
+				padding:0;
+				color:#888;
+				font-size:11px;
+				line-height:11px;
+				text-transform:uppercase;
+			}
+			
+			#stats div p {
+				width:100%;
+				float:left;
+				font-size:18px;
+				font-weight:bold;
+			}
+			
+				#stats div abbr {
+					color:#888;
+					font-size:16px;
+					font-weight:normal;
+				}
+				
+		#stats div:hover {
+			opacity:1;
+		}
+		
+	#tweet {
+		width:100%;
+		float:left;
+		margin:20px 0 0;
+	}
+	
+		#tweet p {
+			width:360px;
+			float:left;
+			margin:5px 0 0;
+			padding-left:9px;
+			border-left:1px solid #aaa;
+			font-size:14px;
+		}
+		
+		#tweet span {
+			width:100%;
+			float:left;
+			margin:18px 0 0;
+			color:#888;
+		}
+		
+			#tweet span a {
+				color:#666;
+			}
+			
+			#tweet span a:hover {
+				color:#333;
+			}
+			
+#articles {
+	width:370px;
+	float:right;
+	margin:0;
+}
+
+	#articles article {
+		width:100%;
+		float:left;
+		margin:0 0 40px;
+	}
+	
+	#articles .last {
+		margin:0;
+	}
+	
+		#articles h4 {
+			width:100%;
+			float:left;
+			margin:0 0 10px;
+			font-size:18px;
+		}
+		
+
+/****************************************
+ * Footer
+ ****************************************/
+#sites {
+	width:200px;
+	float:left;
+}
+
+	#sites a {
+		width:16px;
+		height:16px;
+		float:left;
+		margin-right:10px;
+		opacity:0.6;
+		transition:opacity 100ms linear;
+			-webkit-transition:opacity 100ms linear;
+			-moz-transition:opacity 100ms linear;
+			-ms-transition:opacity 100ms linear;
+			-o-transition:opacity 100ms linear;
+	}
+	
+		#sites img {
+			width:16px;
+			height:16px;
+		}
+		
+	#sites a:hover {
+		opacity:1;
+	}
+	
+#legal {
+	width:580px;
+	float:right;
+	color:#888;
+	text-align:right;
+}
+
+	#legal a, #legal a:visited {
+		color:#666;
+		font-weight:bold;
+	}
+	
+		#legal em {
+			font-style:normal;
+		}
+		
+
+/* END */
